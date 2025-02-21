@@ -1,0 +1,36 @@
+/* app/login/page.module.css */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .title {
+    text-align: center;
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 8px;
+    color: rgb(83, 83, 83);
+  }
+  
+  .error {
+    color: red;
+    font-size: 14px;
+  }
+  
+  .button {
+    padding: 10px;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
