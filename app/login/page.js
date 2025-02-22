@@ -4,7 +4,7 @@
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
-import styles from './page.module.css'; // Importe os estilos
+import styles from './page.module.css';
 import { useRouter } from 'next/navigation'; // Para redirecionar o usuário
 
 const schema = z.object({
