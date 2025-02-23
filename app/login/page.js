@@ -6,6 +6,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import styles from './page.module.css';
 import { useRouter } from 'next/navigation'; // Para redirecionar o usuário
+import Link from 'next/link';
 
 const schema = z.object({
     email: z.string().email('E-mail inválido'),
@@ -51,10 +52,10 @@ export default function Login() {
 
     return (
         <div className={styles.container}>
-            <h1 className={styles.title}>Página de Login</h1>
+            <h1 className={styles.title}>Entre na sua conta do Run Rate</h1>
             <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
                 <div>
-                    <label>E-mail:</label>
+                    <label><b>E-mail</b></label>
                     <input
                         {...register('email')}
                         placeholder="Digite seu e-mail"
@@ -65,7 +66,7 @@ export default function Login() {
                     )}
                 </div>
                 <div>
-                    <label>Senha:</label>
+                    <label><b>Senha</b></label>
                     <input
                         {...register('password')}
                         type="password"
@@ -76,6 +77,7 @@ export default function Login() {
                         <span className={styles.error}>{errors.password.message}</span>
                     )}
                 </div>
+                <Link href="/esqueci-minha-senha" className={styles.esqueciSenha}>Esqueci minha senha</Link>
                 <button type="submit" className={styles.button}>
                     Entrar
                 </button>

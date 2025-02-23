@@ -3,22 +3,30 @@
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
+    color: rgb(26, 26, 26);    
   }
   
   .title {
     text-align: center;
+    font-size: 22px;
+    font-weight: bold;
   }
   
   .form {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 25px;
   }
   
   .input {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     color: rgb(83, 83, 83);
+    border: solid 1px;
+    border-color: rgb(83, 83, 83);
+    border-radius: 5px;
+    
   }
   
   .error {
@@ -30,7 +38,13 @@
     padding: 10px;
     background-color: #0070f3;
     color: white;
-    border: none;
+    border: none;    
     border-radius: 5px;
     cursor: pointer;
+  }
+
+  .esqueciSenha {
+    color: #0070f3;
+    margin-top: -10px;
+    margin-bottom: 10px;
   }
