@@ -6,6 +6,8 @@ import { z } from 'zod';
 import styles from './page.module.css';
 import { useRouter } from 'next/navigation'; // Para redirecionar o usuário
 import Link from 'next/link';
+import { FcGoogle } from 'react-icons/fc'; // Ícone do Google
+import { FaFacebook } from 'react-icons/fa'; // Ícone do Facebook
 
 const schema = z.object({
     email: z.string().email('E-mail inválido'),
@@ -79,8 +81,21 @@ export default function Login() {
                 <Link href="/esqueci-minha-senha" className={styles.esqueciSenha}>Esqueci minha senha</Link>
                 <button type="submit" className={styles.button}>
                     Entrar
-                </button>
+                </button>                
             </form>
+            <p>Ou entre com:</p>
+            <div className={styles.socialButtons}>
+                <button className={styles.socialButton}>
+                    <FcGoogle size={24} />
+                    Google
+                </button>
+                <button className={styles.socialButton}>
+                    <FaFacebook size={24} color="#3b5998" />
+                    Facebook
+                </button>
+            </div>
+            <div className={styles.separator} />
+            <p>Ainda não possui uma conta? <Link href="/cadastro"><b>Cadastre-se</b></Link></p>
         </div>
     );
 }
