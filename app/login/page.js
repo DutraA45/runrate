@@ -1,4 +1,3 @@
-// app/login/page.js
 'use client';
 
 import { useForm } from 'react-hook-form';
