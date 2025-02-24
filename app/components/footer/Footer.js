@@ -74,7 +74,7 @@ export default function Footer() {
           {/* Logo com tamanho fixo e proporção mantida */}
           <div style={{ width: '100px', height: '40px', position: 'relative' }}>
             <Image
-              src="/images/logo.png"
+              src="/images/logo-run-rate-scaled.png"
               alt="RunRate Logo"
               layout="fill"
               objectFit="contain"
