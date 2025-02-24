@@ -1,6 +1,9 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Footer.module.css';
+import { FaFacebookF } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { FaInstagram } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -57,38 +60,27 @@ export default function Footer() {
       <div className={styles.bottomFooter}>
         <div className={styles.social}>
           <Link href="https://facebook.com">
-            <Image
-              src="/images/facebook-icon.svg"
-              alt="Facebook"
-              width={24}
-              height={24}
-            />
+            <FaFacebookF size={24} color="#000" />
           </Link>
-          <Link href="https://twitter.com">
-            <Image
-              src="/images/x-twitter-icon.svg"
-              alt="Twitter"
-              width={24}
-              height={24}
-            />
+          <Link href="https://twitter.com">            
+            <FaXTwitter size={24} color="#000" />
           </Link>
-          <Link href="https://instagram.com">
-            <Image
-              src="/images/instagram-icon.svg"
-              alt="Instagram"
-              width={24}
-              height={24}
-            />
+          <Link href="https://instagram.com">            
+            <FaInstagram size={24} color="#000" />
           </Link>
         </div>
 
         <div className={styles.logo}>
-          <Image
-            src="/images/logo.png"
-            alt="RunRate Logo"
-            width={100}
-            height={40}
-          />
+          {/* Logo com tamanho fixo e proporção mantida */}
+          <div style={{ width: '100px', height: '40px', position: 'relative' }}>
+            <Image
+              src="/images/logo.png"
+              alt="RunRate Logo"
+              layout="fill"
+              objectFit="contain"
+              priority
+            />
+          </div>
         </div>
 
         <div className={styles.links}>
