@@ -3,7 +3,7 @@ import Header from '../components/header/general-header';
 import Menu from '../components/menu';
 import Footer from '../components/footer';
 
-export default function RootLayout({ children }) {
+export default function HomeLayout({ children }) {
   return (
     <html lang="pt-BR">
       <head>
