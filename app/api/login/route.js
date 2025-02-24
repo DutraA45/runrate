@@ -36,7 +36,18 @@ export async function POST(request) {
     if (user && (await bcrypt.compare(password, user.password))) {
       // Gera um token JWT (simulado)
       const token = 'fake-jwt-token';
-      return NextResponse.json({ token }, { status: 200 });
+
+      // Configura o cookie com as flags de segurança
+      const response = NextResponse.json({ token }, { status: 200 });
+      response.cookies.set('token', token, {
+        httpOnly: true,
+        secure: process.env.NODE_ENV === 'production', // Secure apenas em produção
+        sameSite: 'strict',
+        maxAge: 3600, // Expira em 1 hora
+        path: '/', // Disponível em toda a aplicação
+      });
+
+      return response;
     }
 
     // Retorna erro se as credenciais forem inválidas
