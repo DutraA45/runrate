@@ -30,7 +30,7 @@ export default function HeroBlock() {
             <Image
               src="/images/hero-character.jpg"
               alt="Personagem correndo"
-              layout="fill" 
+              fill={true} 
               objectFit="contain"
               priority // Prioriza o carregamento da imagem
               quality={75} // Reduz a qualidade para melhorar o desempenho

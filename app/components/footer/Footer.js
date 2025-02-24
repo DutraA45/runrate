@@ -76,7 +76,7 @@ export default function Footer() {
             <Image
               src="/images/logo-run-rate-scaled.png"
               alt="RunRate Logo"
-              layout="fill"
+              fill={true}
               objectFit="contain"
               priority
             />
