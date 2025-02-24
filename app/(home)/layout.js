@@ -1,7 +1,7 @@
-import './globals.css';
-import Header from './components/header/general-header';
-import Menu from './components/menu';
-import Footer from './components/footer';
+import '../globals.css';
+import Header from '../components/header/general-header';
+import Menu from '../components/menu';
+import Footer from '../components/footer';
 
 export default function RootLayout({ children }) {
   return (

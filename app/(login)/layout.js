@@ -1,3 +1,4 @@
+import '../globals.css';
 import Header from '../components/header/login-header';
 import Footer from '../components/footer';
 
