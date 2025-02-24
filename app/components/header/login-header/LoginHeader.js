@@ -9,14 +9,15 @@ export default function Header() {
         <Link href="/">
           {/* Contêiner pai com tamanho proporcional à logo */}
           <div style={{ width: '150px', height: '30px', position: 'relative' }}>
-            {/* Componente Image com fill={true} e objectFit="contain" */}
+            {/* Componente Image com fill={true} e style={{ objectFit: 'contain' }} */}
             <Image
               src="/images/logo-run-rate-scaled.png"
               alt="Run Rate Logo"
               fill={true} // Preenche o contêiner pai
-              objectFit="contain" // Mantém a proporção da imagem
+              style={{ objectFit: 'contain' }} // Mantém a proporção da imagem
               priority // Prioriza o carregamento da imagem
               quality={75} // Reduz a qualidade para melhorar o desempenho
+              sizes="(max-width: 768px) 100vw, 150px"
             />
           </div>
         </Link>

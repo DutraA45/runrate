@@ -31,9 +31,10 @@ export default function HeroBlock() {
               src="/images/hero-character.jpg"
               alt="Personagem correndo"
               fill={true} 
-              objectFit="contain"
+              style={{ objectFit: 'contain' }}
               priority // Prioriza o carregamento da imagem
               quality={75} // Reduz a qualidade para melhorar o desempenho
+              sizes="(max-width: 768px) 100vw, 150px"
             />
           </div>
         </div>

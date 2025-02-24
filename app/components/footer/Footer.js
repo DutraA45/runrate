@@ -77,7 +77,8 @@ export default function Footer() {
               src="/images/logo-run-rate-scaled.png"
               alt="RunRate Logo"
               fill={true}
-              objectFit="contain"
+              style={{ objectFit: 'contain' }}
+              sizes="(max-width: 768px) 100vw, 150px"
               priority
             />
           </div>
