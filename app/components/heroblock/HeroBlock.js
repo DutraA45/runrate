@@ -26,12 +26,16 @@ export default function HeroBlock() {
 
         {/* Bloco da Imagem */}
         <div className={styles.image}>
-          <Image
-            src="/images/hero-character.jpg"
-            alt="Personagem correndo"
-            width={500}
-            height={400}
-          />
+          <div style={{ width: '500px', height: '400px', position: 'relative' }}>
+            <Image
+              src="/images/hero-character.jpg"
+              alt="Personagem correndo"
+              layout="fill" 
+              objectFit="contain"
+              priority // Prioriza o carregamento da imagem
+              quality={75} // Reduz a qualidade para melhorar o desempenho
+            />
+          </div>
         </div>
       </div>
     </div>
