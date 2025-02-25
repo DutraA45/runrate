@@ -1,9 +1,13 @@
-// app/components/Header.js
+'use client';
+
 import Link from 'next/link';
 import Image from 'next/image';
 import styles from './Header.module.css';
+import { useAuth } from '../../../context/AuthContext';
 
 export default function Header() {
+  const { isAuthenticated, user, logout } = useAuth();
+
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
@@ -33,12 +37,23 @@ export default function Header() {
       </div>
 
       <div className={styles.buttons}>
-        <Link href="/login">
-          <button className={styles.buttonEntrar}>Entrar</button>
-        </Link>
-        <Link href="/cadastro">
-          <button className={styles.buttonCadastrar}>Cadastrar</button>
-        </Link>
+        {isAuthenticated ? (
+          <div className={styles.userInfo}>
+            <span>{user?.name}</span> {/* Exibe o nome do usuário */}
+            <button onClick={logout} className={styles.buttonLogout}>
+              Sair
+            </button>
+          </div>
+        ) : (
+          <>
+            <Link href="/login">
+              <button className={styles.buttonEntrar}>Entrar</button>
+            </Link>
+            <Link href="/cadastro">
+              <button className={styles.buttonCadastrar}>Cadastrar</button>
+            </Link>
+          </>
+        )}
       </div>
     </header>
   );
